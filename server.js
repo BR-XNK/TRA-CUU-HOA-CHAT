@@ -54,13 +54,23 @@ Ghi chú ngắn về cơ sở pháp lý tên hàng này.
 
 ===OVERVIEW===
 [XÁC ĐỊNH & PHÂN LOẠI]
-- Phân loại GHS (nhóm nguy hiểm)
-- Mức kiểm soát: Nhóm mấy?
-- Có cần Giấy phép đặc biệt không? (KẾT LUẬN RÕ RÀNG: CÓ / KHÔNG)
-- Có thuộc tiền chất (PL III NĐ 24) không?
-- Có phải lập Kế hoạch phòng ngừa (PL IV NĐ 24) không?
-- Cơ quan thẩm quyền
-- Trích dẫn điều khoản
+
+PHÂN LOẠI GHS: [nhóm nguy hiểm, mã H statements]
+
+MỨC KIỂM SOÁT: Nhóm [số] - [mô tả]
+
+CẦN GIẤY PHÉP ĐẶC BIỆT: [KHÔNG / CÓ] - [lý do rõ ràng]
+Lưu ý: Dầu nhớt, nhiên liệu, dung môi thông thường, hóa chất công nghiệp phổ biến THƯỜNG không cần GP đặc biệt. Chỉ kết luận CÓ nếu thuộc danh mục hạn chế (PL I, II NĐ 24/2026).
+
+TIỀN CHẤT KIỂM SOÁT: [KHÔNG / CÓ] - CAS [số] [không nằm / nằm] trong Phụ lục III NĐ 24/2026
+
+KHAI BÁO HÓA CHẤT HẢI QUAN: [CÓ / KHÔNG] - [lý do: thuộc/không thuộc nhóm HC nguy hiểm phải khai báo]
+
+KẾ HOẠCH PHÒNG NGỪA (PL IV): [KHÔNG BẮT BUỘC / BẮT BUỘC] - [ngưỡng và lý do]
+
+CƠ QUAN THẨM QUYỀN: [liệt kê]
+
+ĐIỀU KHOẢN: [trích dẫn cụ thể]
 
 ===PROCEDURE===
 STEP 1: [Tên bước]

@@ -7,7 +7,7 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap');
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:Inter,sans-serif;background:#F4F8FC;color:#0A2342;min-height:100vh}
+body{font-family:Inter,sans-serif;background:#F4F8FC;color:#0A2342;min-height:100vh;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-size:14px}
 
 /* TOPNAV */
 .topnav{position:fixed;top:0;left:0;right:0;z-index:200;height:60px;display:flex;align-items:center;justify-content:space-between;padding:0 24px;background:#0A2342;box-shadow:0 2px 20px rgba(10,35,66,.4)}
@@ -38,7 +38,7 @@ body{font-family:Inter,sans-serif;background:#F4F8FC;color:#0A2342;min-height:10
 
 /* QUICK CHIPS */
 .quick-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:20px;align-items:center}
-.qlabel{font-size:11px;font-weight:700;color:#8fa5be;text-transform:uppercase;letter-spacing:1px}
+.qlabel{font-size:11px;font-weight:700;color:#5a7290;text-transform:uppercase;letter-spacing:1px}
 .qchip{padding:7px 16px;border-radius:20px;border:1.5px solid rgba(10,35,66,.12);background:#fff;color:#0A2342;font-size:12px;font-weight:600;cursor:pointer;font-family:inherit;transition:all .2s;box-shadow:0 1px 4px rgba(10,35,66,.08)}
 .qchip:hover{border-color:#0047AB;color:#0047AB;box-shadow:0 4px 12px rgba(10,35,66,.12);transform:translateY(-1px)}
 
@@ -48,11 +48,11 @@ body{font-family:Inter,sans-serif;background:#F4F8FC;color:#0A2342;min-height:10
 .si-circle{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:800;flex-shrink:0;transition:all .3s}
 .si-active{background:#0A2342;color:#fff;box-shadow:0 0 0 4px rgba(10,35,66,.15)}
 .si-done{background:#00B894;color:#fff}
-.si-pending{background:#eef1f8;color:#8fa5be;border:2px solid rgba(10,35,66,.1)}
+.si-pending{background:#eef1f8;color:#5a7290;border:2px solid rgba(10,35,66,.1)}
 .si-label{font-size:12px;font-weight:700;white-space:nowrap}
 .si-label-active{color:#0A2342}
 .si-label-done{color:#00B894}
-.si-label-pending{color:#8fa5be}
+.si-label-pending{color:#5a7290}
 .si-line{flex:1;height:2px;background:rgba(10,35,66,.1);margin:0 12px;min-width:20px;transition:all .3s}
 .si-line-done{background:#00B894}
 
@@ -70,17 +70,17 @@ body{font-family:Inter,sans-serif;background:#F4F8FC;color:#0A2342;min-height:10
 .mode-card.selected{border-color:#0A2342!important;background:rgba(10,35,66,.07)!important;box-shadow:0 4px 20px rgba(10,35,66,.2)!important;transform:translateY(-2px)!important}
 .mc-ic{font-size:28px;margin-bottom:8px}
 .mc-label{font-size:13px;font-weight:700;color:#0A2342}
-.mc-sub{font-size:11px;color:#8fa5be;margin-top:3px}
+.mc-sub{font-size:11px;color:#5a7290;margin-top:3px}
 
 /* FORM */
 .field{display:flex;flex-direction:column;gap:5px;margin-bottom:14px}
-.field label{font-size:11px;font-weight:700;color:#4b5e7a;display:flex;align-items:center;gap:5px}
+.field label{font-size:11px;font-weight:700;color:#2d3f56;display:flex;align-items:center;gap:5px}
 .req{color:#dc2626}
 .badge-auto{font-size:9px;padding:2px 7px;border-radius:3px;background:rgba(0,184,148,.1);color:#00B894;border:1px solid rgba(0,184,148,.25);font-weight:700}
 .badge-ai{font-size:9px;padding:2px 7px;border-radius:3px;background:rgba(0,71,171,.1);color:#0047AB;font-weight:700}
 .inp{padding:11px 14px;background:#F4F8FC;border:1.5px solid rgba(10,35,66,.12);border-radius:9px;color:#0A2342;font-family:inherit;font-size:13px;outline:none;transition:all .18s;width:100%}
 .inp:focus{border-color:#0047AB;background:#fff;box-shadow:0 0 0 3px rgba(0,71,171,.08)}
-.inp::placeholder{color:#8fa5be}
+.inp::placeholder{color:#5a7290}
 .inp.filled{border-color:#00B894;background:rgba(0,184,148,.04);color:#0A2342}
 .sel{padding:11px 14px;background:#F4F8FC;border:1.5px solid rgba(10,35,66,.12);border-radius:9px;color:#0A2342;font-family:inherit;font-size:13px;outline:none;cursor:pointer;width:100%}
 .sel:focus{border-color:#0047AB;box-shadow:0 0 0 3px rgba(0,71,171,.08)}
@@ -93,7 +93,7 @@ body{font-family:Inter,sans-serif;background:#F4F8FC;color:#0A2342;min-height:10
 .btn-primary{display:flex;align-items:center;justify-content:center;gap:8px;padding:13px 28px;background:#0A2342;color:#fff;border:none;border-radius:9px;font-family:inherit;font-size:14px;font-weight:800;cursor:pointer;transition:all .2s;box-shadow:0 4px 16px rgba(10,35,66,.3);letter-spacing:.3px}
 .btn-primary:hover:not(:disabled){background:#0d2d56;transform:translateY(-1px);box-shadow:0 6px 24px rgba(10,35,66,.35)}
 .btn-primary:disabled{opacity:.6;cursor:not-allowed;transform:none}
-.btn-sec{padding:11px 18px;background:#fff;color:#4b5e7a;border:1.5px solid rgba(10,35,66,.12);border-radius:9px;font-family:inherit;font-size:12px;font-weight:600;cursor:pointer;transition:all .18s}
+.btn-sec{padding:11px 18px;background:#fff;color:#2d3f56;border:1.5px solid rgba(10,35,66,.12);border-radius:9px;font-family:inherit;font-size:12px;font-weight:600;cursor:pointer;transition:all .18s}
 .btn-sec:hover{border-color:#0A2342;color:#0A2342}
 
 /* HS SUGGEST */
@@ -109,7 +109,7 @@ body{font-family:Inter,sans-serif;background:#F4F8FC;color:#0A2342;min-height:10
 .upload-zone-inner input{position:absolute;inset:0;opacity:0;cursor:pointer;width:100%;height:100%;z-index:2}
 .uz-icon-wrap{width:50px;height:50px;border-radius:12px;background:#0A2342;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0}
 .uz-title{font-size:13px;font-weight:700;color:#0A2342;margin-bottom:3px}
-.uz-sub{font-size:11px;color:#8fa5be;line-height:1.5}
+.uz-sub{font-size:11px;color:#5a7290;line-height:1.5}
 .uz-btn{padding:9px 18px;background:#0A2342;color:#fff;border-radius:8px;font-size:12px;font-weight:700;white-space:nowrap;flex-shrink:0}
 .uploaded-bar{display:none;align-items:center;gap:12px;padding:12px 18px;background:rgba(0,184,148,.08);border-top:1px solid rgba(0,184,148,.2)}
 .analyzing-bar{display:none;align-items:center;gap:10px;padding:11px 18px;background:rgba(0,71,171,.06);border-top:1px solid rgba(0,71,171,.1)}
@@ -120,7 +120,7 @@ body{font-family:Inter,sans-serif;background:#F4F8FC;color:#0A2342;min-height:10
 .load-card{background:#fff;border:1px solid rgba(10,35,66,.08);border-radius:16px;padding:48px 24px;text-align:center;box-shadow:0 4px 16px rgba(10,35,66,.1);margin-bottom:16px}
 .load-ring{width:54px;height:54px;border:3px solid #eef1f8;border-top-color:#0047AB;border-radius:50%;animation:spin 1s linear infinite;margin:0 auto 18px}
 .load-steps{display:flex;justify-content:center;gap:6px;margin-top:14px;flex-wrap:wrap}
-.lstep{font-size:10px;padding:4px 11px;border-radius:4px;background:#F4F8FC;color:#8fa5be;border:1px solid rgba(10,35,66,.08);transition:all .3s}
+.lstep{font-size:10px;padding:4px 11px;border-radius:4px;background:#F4F8FC;color:#5a7290;border:1px solid rgba(10,35,66,.08);transition:all .3s}
 .lstep.on{background:rgba(0,71,171,.08);color:#0047AB;border-color:rgba(0,71,171,.2);font-weight:700}
 
 /* ERROR */
@@ -147,13 +147,13 @@ body{font-family:Inter,sans-serif;background:#F4F8FC;color:#0A2342;min-height:10
 
 /* KEY FACTS */
 .kf-card{background:#fff;border:1.5px solid rgba(10,35,66,.08);border-radius:16px;padding:20px;box-shadow:0 1px 4px rgba(10,35,66,.08)}
-.kf-title{font-size:10px;font-weight:700;color:#8fa5be;text-transform:uppercase;letter-spacing:1px;margin-bottom:12px}
+.kf-title{font-size:10px;font-weight:700;color:#5a7290;text-transform:uppercase;letter-spacing:1px;margin-bottom:12px}
 .kf-row{display:flex;align-items:center;justify-content:space-between;padding:9px 13px;border-radius:8px;background:#F4F8FC;margin-bottom:7px}
-.kfr-left{font-size:12px;font-weight:600;color:#4b5e7a;display:flex;align-items:center;gap:6px}
+.kfr-left{font-size:12px;font-weight:600;color:#2d3f56;display:flex;align-items:center;gap:6px}
 .kfr-val{font-size:11px;font-weight:800;padding:3px 10px;border-radius:20px}
 .kfr-yes{background:rgba(220,38,38,.08);color:#dc2626}
 .kfr-no{background:rgba(0,184,148,.1);color:#00B894}
-.kfr-warn{background:rgba(217,119,6,.08);color:#d97706}
+.kfr-warn{background:rgba(100,116,139,.08);color:#475569}
 
 /* DECL BOX */
 .decl-card{background:#fff;border:2px solid #0A2342;border-radius:16px;padding:20px;margin-bottom:16px;box-shadow:0 4px 16px rgba(10,35,66,.1)}
@@ -161,20 +161,20 @@ body{font-family:Inter,sans-serif;background:#F4F8FC;color:#0A2342;min-height:10
 .decl-title{font-size:11px;font-weight:800;color:#0A2342;text-transform:uppercase;letter-spacing:1px}
 .decl-copy{display:flex;align-items:center;gap:5px;padding:6px 14px;background:#0A2342;color:#fff;border:none;border-radius:6px;font-size:11px;font-weight:700;cursor:pointer;font-family:inherit}
 .decl-name{font-size:13px;font-weight:600;color:#0A2342;line-height:1.7;font-family:monospace;padding:12px 16px;background:#F4F8FC;border-radius:8px;border-left:4px solid #0047AB}
-.decl-note{font-size:11px;color:#8fa5be;margin-top:8px;line-height:1.6;font-style:italic}
+.decl-note{font-size:11px;color:#5a7290;margin-top:8px;line-height:1.6;font-style:italic}
 
 /* TABS */
 .tabs{display:flex;border-bottom:2px solid rgba(10,35,66,.08);margin-bottom:16px}
-.tab{padding:10px 20px;font-size:12px;font-weight:700;color:#8fa5be;cursor:pointer;background:none;border:none;border-bottom:2px solid transparent;margin-bottom:-2px;font-family:inherit;transition:all .18s}
-.tab:hover{color:#4b5e7a}
+.tab{padding:10px 20px;font-size:12px;font-weight:700;color:#5a7290;cursor:pointer;background:none;border:none;border-bottom:2px solid transparent;margin-bottom:-2px;font-family:inherit;transition:all .18s}
+.tab:hover{color:#2d3f56}
 .tab.active{color:#0047AB;border-bottom-color:#0047AB}
 .pane{display:none}.pane.active{display:block}
 
 /* RESULT CARDS */
 .rcard{background:#fff;border:1.5px solid rgba(10,35,66,.08);border-radius:14px;overflow:hidden;margin-bottom:14px;box-shadow:0 1px 4px rgba(10,35,66,.06)}
-.rcard-head{padding:12px 18px;border-bottom:1px solid rgba(10,35,66,.06);display:flex;align-items:center;gap:8px;font-size:11px;font-weight:700;color:#4b5e7a;background:#F4F8FC}
+.rcard-head{padding:12px 18px;border-bottom:1px solid rgba(10,35,66,.06);display:flex;align-items:center;gap:8px;font-size:11px;font-weight:700;color:#2d3f56;background:#F4F8FC}
 .rnum{width:22px;height:22px;border-radius:6px;background:#0A2342;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:800;color:#fff}
-.rcard-body{padding:18px;font-size:13px;line-height:1.75;color:#4b5e7a}
+.rcard-body{padding:18px;font-size:13px;line-height:1.75;color:#2d3f56}
 .rcard-body p{margin-bottom:7px}
 .rcard-body h3{font-size:10px;font-weight:800;color:#0A2342;text-transform:uppercase;letter-spacing:1px;margin:14px 0 7px;display:flex;align-items:center;gap:6px}
 .rcard-body h3:before{content:"";width:3px;height:12px;border-radius:2px;background:#0047AB;display:block}
@@ -189,7 +189,7 @@ body{font-family:Inter,sans-serif;background:#F4F8FC;color:#0A2342;min-height:10
 .step-item:last-child{border:none}
 .scircle{width:32px;height:32px;border-radius:50%;background:#0A2342;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;color:#fff;flex-shrink:0;margin-top:2px}
 .stitle{font-size:13px;font-weight:700;color:#0A2342;margin-bottom:4px}
-.sdetail{font-size:12px;color:#4b5e7a;line-height:1.6}
+.sdetail{font-size:12px;color:#2d3f56;line-height:1.6}
 .smeta{display:flex;gap:7px;margin-top:6px;flex-wrap:wrap}
 .sbadge{font-size:10px;padding:2px 9px;border-radius:4px;font-weight:600}
 .st{background:rgba(217,119,6,.1);color:#d97706}
@@ -199,7 +199,7 @@ body{font-family:Inter,sans-serif;background:#F4F8FC;color:#0A2342;min-height:10
 .dg-title{font-size:10px;font-weight:800;color:#0A2342;text-transform:uppercase;letter-spacing:1px;margin:14px 0 8px}
 .dg-title:first-child{margin-top:0}
 .doc-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:8px}
-.doc-item{display:flex;gap:8px;align-items:flex-start;padding:9px 11px;border-radius:8px;background:#F4F8FC;border:1.5px solid rgba(10,35,66,.08);font-size:11px;color:#4b5e7a;cursor:pointer;line-height:1.45;transition:all .18s;user-select:none}
+.doc-item{display:flex;gap:8px;align-items:flex-start;padding:9px 11px;border-radius:8px;background:#F4F8FC;border:1.5px solid rgba(10,35,66,.08);font-size:11px;color:#2d3f56;cursor:pointer;line-height:1.45;transition:all .18s;user-select:none}
 .doc-item:hover{border-color:#0047AB;background:rgba(0,71,171,.04)}
 .doc-item.chk{background:rgba(0,184,148,.07);border-color:rgba(0,184,148,.3);color:#0A2342}
 .dchk{width:16px;height:16px;border-radius:3px;border:1.5px solid #8fa5be;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:10px;font-weight:800;color:transparent;margin-top:1px;transition:all .18s}
@@ -233,21 +233,21 @@ body{font-family:Inter,sans-serif;background:#F4F8FC;color:#0A2342;min-height:10
     </div>
   </div>
   <div class="nav-stats">
-    <div style="text-align:center"><div class="nstat-val">1,250+</div><div class="nstat-label">Van ban phap ly</div></div>
-    <div style="text-align:center"><div class="nstat-val">18K+</div><div class="nstat-label">Hoa chat</div></div>
+    <div style="text-align:center"><div class="nstat-val">1,250+</div><div class="nstat-label">Văn bản pháp lý</div></div>
+    <div style="text-align:center"><div class="nstat-val">18K+</div><div class="nstat-label">Hóa chất</div></div>
     <div style="text-align:center"><div class="nstat-val">12K+</div><div class="nstat-label">HS Code</div></div>
     <div style="text-align:center"><div class="nstat-val">96.5%</div><div class="nstat-label">AI Accuracy</div></div>
   </div>
-  <div class="ai-status"><span class="ai-dot"></span>AI dang hoat dong</div>
+  <div class="ai-status"><span class="ai-dot"></span>AI đang hoạt động</div>
 </nav>
 
 <div class="layout">
   <aside class="sidebar">
     <div class="slabel">Tra cuu</div>
-    <button class="slink active" onclick="sidebarMode('import')"><span class="sic">🏭</span>Nhap khau</button>
-    <button class="slink" onclick="sidebarMode('export')"><span class="sic">🚢</span>Xuat khau</button>
+    <button class="slink active" onclick="sidebarMode('import')"><span class="sic">🏭</span>Nhập khẩu</button>
+    <button class="slink" onclick="sidebarMode('export')"><span class="sic">🚢</span>Xuất khẩu</button>
     <button class="slink" onclick="sidebarMode('business')"><span class="sic">📋</span>Kinh doanh HC</button>
-    <button class="slink" onclick="sidebarMode('storage')"><span class="sic">🏬</span>Luu tru / SX</button>
+    <button class="slink" onclick="sidebarMode('storage')"><span class="sic">🏬</span>Lưu trữ / SX</button>
     <button class="slink" onclick="sidebarMode('quick')"><span class="sic">⚡</span>Tra nhanh</button>
   </aside>
 
@@ -267,39 +267,39 @@ body{font-family:Inter,sans-serif;background:#F4F8FC;color:#0A2342;min-height:10
     <div class="step-ind" id="stepInd">
       <div class="si-item">
         <div class="si-circle si-active" id="siC1">1</div>
-        <div class="si-label si-label-active" id="siL1">Chon hoat dong</div>
+        <div class="si-label si-label-active" id="siL1">Chọn hoạt động</div>
       </div>
       <div class="si-line" id="siLine12"></div>
       <div class="si-item">
         <div class="si-circle si-pending" id="siC2">2</div>
-        <div class="si-label si-label-pending" id="siL2">Nhap hoa chat</div>
+        <div class="si-label si-label-pending" id="siL2">Nhập hóa chất</div>
       </div>
       <div class="si-line" id="siLine23"></div>
       <div class="si-item">
         <div class="si-circle si-pending" id="siC3">3</div>
-        <div class="si-label si-label-pending" id="siL3">Phan tich</div>
+        <div class="si-label si-label-pending" id="siL3">Phân tích</div>
       </div>
     </div>
 
     <!-- STEP 1 -->
     <div id="step1" class="card">
       <div class="card-head">
-        <div><div class="card-step">STEP 1</div><div class="card-title">Ban muon lam gi?</div></div>
+        <div><div class="card-step">STEP 1</div><div class="card-title">Bạn muốn làm gì?</div></div>
         <span style="font-size:24px">🎯</span>
       </div>
       <div class="card-body">
         <div class="mode-grid">
           <div class="mode-card selected" id="mc-import" onclick="pickMode('import')">
-            <div class="mc-ic">🏭</div><div class="mc-label">Nhap khau</div><div class="mc-sub">Import Procedures</div>
+            <div class="mc-ic">🏭</div><div class="mc-label">Nhập khẩu</div><div class="mc-sub">Import Procedures</div>
           </div>
           <div class="mode-card" id="mc-export" onclick="pickMode('export')">
-            <div class="mc-ic">🚢</div><div class="mc-label">Xuat khau</div><div class="mc-sub">Export Controls</div>
+            <div class="mc-ic">🚢</div><div class="mc-label">Xuất khẩu</div><div class="mc-sub">Export Controls</div>
           </div>
           <div class="mode-card" id="mc-business" onclick="pickMode('business')">
             <div class="mc-ic">📋</div><div class="mc-label">Kinh doanh HC</div><div class="mc-sub">Business License</div>
           </div>
           <div class="mode-card" id="mc-storage" onclick="pickMode('storage')">
-            <div class="mc-ic">🏬</div><div class="mc-label">Luu tru / SX</div><div class="mc-sub">Storage & Manufacturing</div>
+            <div class="mc-ic">🏬</div><div class="mc-label">Lưu trữ / SX</div><div class="mc-sub">Storage & Manufacturing</div>
           </div>
         </div>
         <div style="margin-top:20px;text-align:right">
@@ -311,7 +311,7 @@ body{font-family:Inter,sans-serif;background:#F4F8FC;color:#0A2342;min-height:10
     <!-- STEP 2 -->
     <div id="step2" class="card" style="display:none">
       <div class="card-head">
-        <div><div class="card-step">STEP 2</div><div class="card-title">Nhap thong tin hoa chat</div></div>
+        <div><div class="card-step">STEP 2</div><div class="card-title">Nhập thông tin hóa chất</div></div>
         <span style="font-size:24px">🧪</span>
       </div>
       <div class="card-body">
@@ -322,7 +322,7 @@ body{font-family:Inter,sans-serif;background:#F4F8FC;color:#0A2342;min-height:10
               <span style="font-size:20px">📄</span>
               <div>
                 <div style="font-size:13px;font-weight:800;color:#0A2342">Upload SDS / MSDS</div>
-                <div style="font-size:10px;color:#8fa5be;margin-top:1px">AI tu dong dien thong tin - Ho tro PDF, DOCX, TXT</div>
+                <div style="font-size:10px;color:#5a7290;margin-top:1px">AI tự động điền thông tin · Hỗ trợ PDF, DOCX, TXT</div>
               </div>
             </div>
             <div style="display:flex;gap:6px">
@@ -334,8 +334,8 @@ body{font-family:Inter,sans-serif;background:#F4F8FC;color:#0A2342;min-height:10
             <input type="file" id="sdsFile" accept=".pdf,.docx,.txt" onchange="handleUpload(this)">
             <div class="uz-icon-wrap">📋</div>
             <div style="flex:1">
-              <div class="uz-title">Keo tha file hoac click de chon</div>
-              <div class="uz-sub">AI se doc SDS va tu dong dien: Ten hoa hoc · CAS Number · HS Code de xuat</div>
+              <div class="uz-title">Kéo thả file hoặc click để chọn</div>
+              <div class="uz-sub">AI sẽ tự đọc SDS và điền: Tên hóa học · CAS Number · HS Code đề xuất</div>
             </div>
             <div class="uz-btn">Upload SDS</div>
           </div>
@@ -343,78 +343,78 @@ body{font-family:Inter,sans-serif;background:#F4F8FC;color:#0A2342;min-height:10
             <div style="width:36px;height:36px;border-radius:8px;background:#00B894;display:flex;align-items:center;justify-content:center;font-size:18px">✅</div>
             <div style="flex:1">
               <div style="font-size:12px;font-weight:700;color:#00B894" id="ubName"></div>
-              <div style="font-size:10px;color:#8fa5be" id="ubSize"></div>
+              <div style="font-size:10px;color:#5a7290" id="ubSize"></div>
             </div>
-            <button onclick="removeFile()" style="background:rgba(220,38,38,.1);border:1px solid rgba(220,38,38,.2);color:#dc2626;padding:5px 12px;border-radius:6px;cursor:pointer;font-size:11px;font-weight:700;font-family:inherit">Xoa</button>
+            <button onclick="removeFile()" style="background:rgba(220,38,38,.1);border:1px solid rgba(220,38,38,.2);color:#dc2626;padding:5px 12px;border-radius:6px;cursor:pointer;font-size:11px;font-weight:700;font-family:inherit">Xóa</button>
           </div>
           <div id="analyzingBar" class="analyzing-bar">
             <div class="aring"></div>
             <div>
-              <div style="font-size:12px;font-weight:700;color:#0047AB" id="analyzingText">Dang doc va trich xuat thong tin SDS...</div>
-              <div style="font-size:10px;color:#8fa5be;margin-top:1px">AI dang nhan dien CAS, ten hoa hoc, HS Code phu hop</div>
+              <div style="font-size:12px;font-weight:700;color:#0047AB" id="analyzingText">Đang đọc và trích xuất thông tin SDS...</div>
+              <div style="font-size:10px;color:#5a7290;margin-top:1px">AI đang nhận diện CAS, tên hóa học, HS Code phù hợp</div>
             </div>
           </div>
           <div id="hsSuggestBar" style="display:none;align-items:center;justify-content:space-between;padding:10px 18px;background:rgba(0,184,148,.06);border-top:1px solid rgba(0,184,148,.15)">
             <div style="font-size:12px;color:#00B894;font-weight:600" id="hsSuggestText">AI de xuat HS Code...</div>
-            <button onclick="acceptHS()" class="hs-btn">Chon HS nay</button>
+            <button onclick="acceptHS()" class="hs-btn">Chọn HS này</button>
           </div>
         </div>
 
         <!-- Form fields -->
         <div class="fg3">
           <div class="field">
-            <label>Ten thuong mai <span class="req">*</span></label>
+            <label>Tên thương mại <span class="req">*</span></label>
             <input id="tradeName" class="inp" placeholder="VD: Acetone, H2SO4..." oninput="autoRecognize(this.value)">
           </div>
           <div class="field">
-            <label>Ten hoa hoc / IUPAC <span class="req">*</span> <span class="badge-auto">AUTO</span></label>
-            <input id="chemName" class="inp" placeholder="AI tu dien tu SDS...">
+            <label>Tên hóa học / IUPAC <span class="req">*</span> <span class="badge-auto">AUTO</span></label>
+            <input id="chemName" class="inp" placeholder="AI tự điền từ SDS...">
           </div>
           <div class="field">
-            <label>Ma CAS Number <span class="req">*</span> <span class="badge-auto">AUTO</span></label>
+            <label>Mã CAS Number <span class="req">*</span> <span class="badge-auto">AUTO</span></label>
             <input id="casNumber" class="inp" placeholder="VD: 67-64-1" style="font-family:monospace">
           </div>
         </div>
         <div class="fg2">
           <div class="field">
-            <label>HS Code tham khao <span class="req">*</span> <span class="badge-ai">AI GÒI Y</span></label>
+            <label>HS Code tham khảo <span class="req">*</span> <span class="badge-ai">AI GÒI Y</span></label>
             <input id="hsCode" class="inp" placeholder="VD: 2914.11.00" style="font-family:monospace">
             <div id="hsFieldSuggest" class="hs-suggest">
               <span style="font-size:11px;color:#00B894;font-weight:600" id="hsFSText"></span>
-              <button class="hs-btn" onclick="acceptHSField()">Chon</button>
+              <button class="hs-btn" onclick="acceptHSField()">Chọn</button>
             </div>
           </div>
           <div class="field">
-            <label>Khoi luong du kien</label>
-            <input id="quantity" class="inp" placeholder="VD: 1.000 kg/lo">
+            <label>Khối lượng dự kiến</label>
+            <input id="quantity" class="inp" placeholder="VD: 1.000 kg/lô">
           </div>
         </div>
         <div class="fg2" style="margin-bottom:14px">
           <div class="field">
-            <label>Muc dich su dung</label>
+            <label>Mục đích sử dụng</label>
             <select id="endUse" class="sel">
-              <option value="">-- Chon muc dich --</option>
-              <option value="sanxuat">San xuat / Gia cong</option>
-              <option value="nghiencuu">Nghien cuu &amp; phat trien</option>
-              <option value="banlai">Kinh doanh / Ban lai</option>
-              <option value="taixuat">Tai xuat khau</option>
-              <option value="congnghe">Xu ly / Moi truong</option>
+              <option value="">-- Chọn mục đích --</option>
+              <option value="sanxuat">Sản xuất / Gia công</option>
+              <option value="nghiencuu">Nghiên cứu & phát triển</option>
+              <option value="banlai">Kinh doanh / Bán lại</option>
+              <option value="taixuat">Tái xuất khẩu</option>
+              <option value="congnghe">Xử lý / Môi trường</option>
             </select>
           </div>
           <div class="field">
-            <label>Xuat xu hang hoa</label>
+            <label>Xuất xứ hàng hóa</label>
             <input id="origin" class="inp" placeholder="VD: China, Korea...">
           </div>
         </div>
         <div class="field" style="margin-bottom:16px">
-          <label>Cau hoi / thong tin them</label>
-          <textarea id="extra" class="ta" placeholder="VD: Co phai xin giay phep khong? Bo ho so can chuan bi?..."></textarea>
+          <label>Câu hỏi / thông tin thêm</label>
+          <textarea id="extra" class="ta" placeholder="VD: Có phải xin giấy phép không? Bộ hồ sơ cần chuẩn bị?..."></textarea>
         </div>
 
         <div style="display:flex;gap:10px;align-items:center;padding-top:14px;border-top:1.5px solid rgba(10,35,66,.08)">
-          <button class="btn-sec" onclick="showStep1()">← Quay lai</button>
-          <button class="btn-primary" id="searchBtn" style="flex:1" onclick="doSearch()">🔍 Phan tich yeu cau phap ly</button>
-          <span id="miss" style="font-size:11px;color:#dc2626;display:none">Dien du truong bat buoc (*)</span>
+          <button class="btn-sec" onclick="showStep1()">← Quay lại</button>
+          <button class="btn-primary" id="searchBtn" style="flex:1" onclick="doSearch()">🔍 Phân tích yeu cau phap ly</button>
+          <span id="miss" style="font-size:11px;color:#dc2626;display:none">Điền đủ trường bắt buộc (*)</span>
         </div>
       </div>
     </div>
@@ -423,15 +423,15 @@ body{font-family:Inter,sans-serif;background:#F4F8FC;color:#0A2342;min-height:10
     <div class="loading" id="loading">
       <div class="load-card">
         <div class="load-ring"></div>
-        <div style="font-size:15px;font-weight:800;color:#0A2342;margin-bottom:6px" id="loadMsg">Dang phan tich hoa chat...</div>
-        <div style="font-size:12px;color:#8fa5be">Tra cuu van ban phap ly 2025-2026</div>
+        <div style="font-size:15px;font-weight:800;color:#0A2342;margin-bottom:6px" id="loadMsg">Đang phân tích hóa chất...</div>
+        <div style="font-size:12px;color:#5a7290">Tra cứu văn bản pháp lý 2025–2026</div>
         <div class="load-steps">
-          <span class="lstep" id="ls0">Nhan dien HC</span>
-          <span class="lstep" id="ls1">Tra tien chat</span>
-          <span class="lstep" id="ls2">Doi chieu luat</span>
-          <span class="lstep" id="ls3">Xac dinh thu tuc</span>
-          <span class="lstep" id="ls4">Ten khai bao HQ</span>
-          <span class="lstep" id="ls5">Tong hop</span>
+          <span class="lstep" id="ls0">Nhận diện HC</span>
+          <span class="lstep" id="ls1">Tra tiền chất</span>
+          <span class="lstep" id="ls2">Đối chiếu luật</span>
+          <span class="lstep" id="ls3">Xác định thủ tục</span>
+          <span class="lstep" id="ls4">Tên khai báo HQ</span>
+          <span class="lstep" id="ls5">Tổng hợp</span>
         </div>
       </div>
     </div>
@@ -444,7 +444,7 @@ body{font-family:Inter,sans-serif;background:#F4F8FC;color:#0A2342;min-height:10
       <div class="card" style="margin-bottom:16px">
         <div class="card-head">
           <div><div class="card-step">STEP 3</div><div class="card-title" id="resTitle">Ket qua phan tich</div></div>
-          <button onclick="resetAll()" style="background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:#fff;padding:7px 16px;border-radius:8px;font-family:inherit;font-size:12px;font-weight:600;cursor:pointer">← Tra cuu moi</button>
+          <button onclick="resetAll()" style="background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:#fff;padding:7px 16px;border-radius:8px;font-family:inherit;font-size:12px;font-weight:600;cursor:pointer">← Tra cứu mới</button>
         </div>
         <div style="padding:14px 22px 8px">
           <div id="resTags" style="display:flex;gap:6px;flex-wrap:wrap"></div>
@@ -463,17 +463,17 @@ body{font-family:Inter,sans-serif;background:#F4F8FC;color:#0A2342;min-height:10
               <div class="cc-ring-inner"><div class="cc-val" id="scoreVal">80</div><div class="cc-max">/100</div></div>
             </div>
             <div>
-              <div class="cc-verdict" id="ccVerdict">Co the thuc hien</div>
+              <div class="cc-verdict" id="ccVerdict">Có thể thực hiện</div>
               <div class="cc-list" id="ccList"></div>
             </div>
           </div>
         </div>
         <div class="kf-card">
-          <div class="kf-title">KIEM TRA NHANH</div>
-          <div class="kf-row"><div class="kfr-left">📋 Giay phep dac biet</div><div class="kfr-val" id="kfLic">...</div></div>
-          <div class="kf-row"><div class="kfr-left">⚗️ Tien chat kiem soat</div><div class="kfr-val" id="kfPre">...</div></div>
-          <div class="kf-row"><div class="kfr-left">🛃 Khai bao HC hai quan</div><div class="kfr-val" id="kfDec">...</div></div>
-          <div class="kf-row"><div class="kfr-left">📄 SDS tieng Viet</div><div class="kfr-val kfr-yes">Bat buoc</div></div>
+          <div class="kf-title">KIỂM TRA NHANH</div>
+          <div class="kf-row"><div class="kfr-left">📋 Giấy phép đặc biệt</div><div class="kfr-val" id="kfLic">...</div></div>
+          <div class="kf-row"><div class="kfr-left">⚗️ Tiền chất kiểm soát</div><div class="kfr-val" id="kfPre">...</div></div>
+          <div class="kf-row"><div class="kfr-left">🛃 Khai báo HC hải quan</div><div class="kfr-val" id="kfDec">...</div></div>
+          <div class="kf-row"><div class="kfr-left">📄 SDS tiếng Việt</div><div class="kfr-val kfr-yes">Bắt buộc</div></div>
         </div>
       </div>
 
@@ -482,25 +482,25 @@ body{font-family:Inter,sans-serif;background:#F4F8FC;color:#0A2342;min-height:10
           <div class="decl-title">Ten hang khai bao hai quan de xuat</div>
           <button class="decl-copy" onclick="copyDecl()">📋 Copy</button>
         </div>
-        <div class="decl-name" id="declName">Dang tai...</div>
+        <div class="decl-name" id="declName">Đang tải...</div>
         <div class="decl-note" id="declNote"></div>
       </div>
 
       <div class="tabs">
-        <button class="tab active" onclick="switchTab('overview',this)">📋 Tong quan</button>
-        <button class="tab" onclick="switchTab('procedure',this)">⚙️ Quy trinh</button>
-        <button class="tab" onclick="switchTab('docs',this)">📁 Ho so</button>
-        <button class="tab" onclick="switchTab('risks',this)">⚠️ Rui ro</button>
+        <button class="tab active" onclick="switchTab('overview',this)">📋 Tổng quan</button>
+        <button class="tab" onclick="switchTab('procedure',this)">⚙️ Quy trình</button>
+        <button class="tab" onclick="switchTab('docs',this)">📁 Hồ sơ</button>
+        <button class="tab" onclick="switchTab('risks',this)">⚠️ Rủi ro</button>
       </div>
-      <div class="pane active" id="pane-overview"><div class="rcard"><div class="rcard-head"><span class="rnum">AI</span>Phan tich &amp; Tu van phap ly</div><div class="rcard-body" id="ovContent"></div></div></div>
-      <div class="pane" id="pane-procedure"><div class="rcard"><div class="rcard-head"><span class="rnum">2</span>Quy trinh thuc hien</div><div class="rcard-body" id="prContent"></div></div></div>
-      <div class="pane" id="pane-docs"><div class="rcard"><div class="rcard-head"><span class="rnum">3</span>Danh muc ho so - tick khi chuan bi xong</div><div class="rcard-body" id="dcContent"></div></div></div>
-      <div class="pane" id="pane-risks"><div class="rcard"><div class="rcard-head"><span class="rnum">4</span>Rui ro &amp; Loi pho bien</div><div class="rcard-body" id="rkContent"></div></div></div>
+      <div class="pane active" id="pane-overview"><div class="rcard"><div class="rcard-head"><span class="rnum">AI</span>Phân tích &amp; Tu van phap ly</div><div class="rcard-body" id="ovContent"></div></div></div>
+      <div class="pane" id="pane-procedure"><div class="rcard"><div class="rcard-head"><span class="rnum">2</span>Quy trình thuc hien</div><div class="rcard-body" id="prContent"></div></div></div>
+      <div class="pane" id="pane-docs"><div class="rcard"><div class="rcard-head"><span class="rnum">3</span>Danh mục hồ sơ – tick ✓ khi chuẩn bị xong</div><div class="rcard-body" id="dcContent"></div></div></div>
+      <div class="pane" id="pane-risks"><div class="rcard"><div class="rcard-head"><span class="rnum">4</span>Rủi ro &amp; Loi pho bien</div><div class="rcard-body" id="rkContent"></div></div></div>
     </div>
   </main>
 </div>
 
-<button class="ai-toggle" onclick="alert('AI Chat se san sang trong phien ban tiep theo!')">🤖</button>
+<button class="ai-toggle" onclick="alert('AI Chat sẽ sẵn sàng trong phiên bản tiếp theo!')">🤖</button>
 
 <script>
 var BACKEND = "https://tra-cuu-hoa-chat.onrender.com";
@@ -513,8 +513,8 @@ var EX = {
   h2so4:    {t:"Sulfuric Acid 98%",c:"Sulfuric acid",cas:"7664-93-9",hs:"2807.00.10",qty:"20.000 kg/lo",eu:"sanxuat",ori:"China",ex:"Axit dam dac 98%, an mon manh. Dung san xuat phan bon.",m:"import"},
   methanol: {t:"Methanol Industrial",c:"Methanol",cas:"67-56-1",hs:"2905.11.00",qty:"10.000 lit",eu:"sanxuat",ori:"South Korea",ex:"Co phai tien chat khong? Dieu kien nhap khau?",m:"import"},
   lpg:      {t:"LPG (Khi hoa long)",c:"Propane/Butane mixture",cas:"68476-85-7",hs:"2711.12.00",qty:"500 tan/thang",eu:"banlai",ori:"Singapore",ex:"Luu tru kho cang. Yeu cau PCCC, ke hoach ung pho su co?",m:"storage"},
-  naoh:     {t:"Caustic Soda NaOH",c:"Sodium hydroxide",cas:"1310-73-2",hs:"2815.11.00",qty:"2.000 kg/lo",eu:"banlai",ori:"Vietnam",ex:"Xuat khau sang Myanmar. Yeu cau nhan hang, SDS?",m:"export"},
-  orange2t: {t:"Orange 2T Low Smoke",c:"Low boiling point hydrogen treated naphtha",cas:"64742-48-9",hs:"2710.19.90",qty:"1.000 kg/lo",eu:"sanxuat",ori:"Indonesia",ex:"Dau boi tron dong co 2 thi dang long nhap khau phan phoi. Co phai khai bao hoa chat khong?",m:"import"}
+  naoh:     {t:"Caustic Soda NaOH",c:"Sodium hydroxide",cas:"1310-73-2",hs:"2815.11.00",qty:"2.000 kg/lo",eu:"banlai",ori:"Vietnam",ex:"Xuất khẩu sang Myanmar. Yeu cau nhan hang, SDS?",m:"export"},
+  orange2t: {t:"Orange 2T Low Smoke",c:"Low boiling point hydrogen treated naphtha",cas:"64742-48-9",hs:"2710.19.90",qty:"1.000 kg/lo",eu:"sanxuat",ori:"Indonesia",ex:"Dau boi tron dong co 2 thi dạng lỏng nhap khau phan phoi. Co phai khai bao hoa chat khong?",m:"import"}
 };
 
 var LOCAL_DB = {
@@ -631,7 +631,7 @@ function autoRecognize(name) {
           hsSugVal = v.hs;
           var el = document.getElementById("hsFieldSuggest");
           var txt = document.getElementById("hsFSText");
-          if (el && txt) { txt.textContent = "AI de xuat: " + v.hs; el.classList.add("show"); }
+          if (el && txt) { txt.textContent = "AI đề xuất: " + v.hs; el.classList.add("show"); }
         }
         break;
       }
@@ -688,13 +688,13 @@ async function callExtractSDS(text, fname) {
       fillIfEmpty("casNumber", info.casNumber);
       if (info.hsSuggestion) {
         hsSugVal = info.hsSuggestion;
-        document.getElementById("hsSuggestText").textContent = "AI de xuat HS Code: " + info.hsSuggestion + (info.hsDescription ? " - " + info.hsDescription : "");
+        document.getElementById("hsSuggestText").textContent = "AI đề xuất HS Code: " + info.hsSuggestion + (info.hsDescription ? " - " + info.hsDescription : "");
         document.getElementById("hsSuggestBar").style.display = "flex";
       }
-      document.getElementById("analyzingText").textContent = "Da tu dong dien tu SDS!";
+      document.getElementById("analyzingText").textContent = "Đã tự động điền từ SDS!";
     }
   } catch(e) {
-    document.getElementById("analyzingText").textContent = "Loi xu ly - nhap thu cong";
+    document.getElementById("analyzingText").textContent = "Lỗi xử lý – nhập thủ công";
   }
   setTimeout(function(){ document.getElementById("analyzingBar").style.display = "none"; }, 2500);
 }
@@ -767,7 +767,7 @@ async function doSearch() {
     document.getElementById("loading").classList.remove("show");
     document.getElementById("step2").style.display = "block";
     var eb = document.getElementById("errBox");
-    eb.textContent = "Loi: " + (e.message||"Khong ket noi duoc backend. Render co the dang sleep (cho 30 giay roi thu lai).");
+    eb.textContent = "Lỗi: " + (e.message||"Không kết nối được backend. Render có thể đang sleep (chờ 30 giây rồi thử lại).");
     eb.classList.add("show");
     updateSteps(2);
   } finally {
@@ -831,7 +831,7 @@ function renderDocs(el, text) {
     } else if (t.charAt(0)==="-" && t.charAt(1)===" " && cur) {
       cur.items.push(t.slice(2));
     } else if (t.charAt(0)==="-" && t.charAt(1)===" " && !cur) {
-      if (!groups.length) groups.push({title:"Ho so",items:[]});
+      if (!groups.length) groups.push({title:"Hồ sơ",items:[]});
       groups[groups.length-1].items.push(t.slice(2));
     }
   }
@@ -856,10 +856,10 @@ function renderRisks(el, text) {
   var html=""; var lines=text.split("\n");
   for (var i=0; i<lines.length; i++) {
     var t=lines[i].trim(); if (!t) continue;
-    if (/xu phat|phat tien|vi pham/i.test(t)) html+='<div class="wb wb-r"><div class="wb-title">Rui ro phap ly</div>'+t+'</div>';
-    else if (/khuyen nghi|luu y|nen /i.test(t)) html+='<div class="wb wb-y"><div class="wb-title">Khuyen nghi</div>'+t+'</div>';
-    else if (t.charAt(0)==="-") html+='<p style="padding-left:10px;border-left:2px solid rgba(0,71,171,.2);margin-bottom:8px;font-size:13px;color:#4b5e7a">→ '+t.slice(2)+'</p>';
-    else html+='<p style="margin-bottom:8px;font-size:13px;color:#4b5e7a">'+t+'</p>';
+    if (/xu phat|phat tien|vi pham/i.test(t)) html+='<div class="wb wb-r"><div class="wb-title">Rủi ro phap ly</div>'+t+'</div>';
+    else if (/khuyen nghi|luu y|nen /i.test(t)) html+='<div class="wb wb-y"><div class="wb-title">Khuyến nghị</div>'+t+'</div>';
+    else if (t.charAt(0)==="-") html+='<p style="padding-left:10px;border-left:2px solid rgba(0,71,171,.2);margin-bottom:8px;font-size:13px;color:#2d3f56">→ '+t.slice(2)+'</p>';
+    else html+='<p style="margin-bottom:8px;font-size:13px;color:#2d3f56">'+t+'</p>';
   }
   el.innerHTML=html;
 }
@@ -867,7 +867,7 @@ function renderRisks(el, text) {
 function copyDecl() {
   var txt=document.getElementById("declName").textContent;
   navigator.clipboard.writeText(txt).then(function(){
-    var btn=event.target; btn.textContent="Da copy!";
+    var btn=event.target; btn.textContent="Đã copy!";
     setTimeout(function(){btn.textContent="Copy";},2000);
   });
 }
@@ -877,13 +877,13 @@ function buildDecl(body) {
   if (body.chemName && body.tradeName && body.chemName.toLowerCase()!==body.tradeName.toLowerCase()) parts.push(body.chemName+" ("+body.tradeName+")");
   else parts.push(body.tradeName||body.chemName);
   var ex=(body.extra||"").toLowerCase();
-  if (ex.indexOf("long")!==-1||ex.indexOf("liquid")!==-1) parts.push("dang long");
-  else if (ex.indexOf("ran")!==-1) parts.push("dang ran");
+  if (ex.indexOf("long")!==-1||ex.indexOf("liquid")!==-1) parts.push("dạng lỏng");
+  else if (ex.indexOf("ran")!==-1) parts.push("dạng rắn");
   if (body.casNumber) parts.push("CAS: "+body.casNumber);
   if (body.hsCode) parts.push("HS: "+body.hsCode);
-  var useMap={sanxuat:"dung san xuat/gia cong",nghiencuu:"dung nghien cuu",banlai:"kinh doanh/ban lai",taixuat:"tai xuat khau",congnghe:"xu ly moi truong"};
+  var useMap={sanxuat:"dùng sản xuất/gia công",nghiencuu:"dùng nghiên cứu",banlai:"kinh doanh/bán lại",taixuat:"tái xuất khẩu",congnghe:"xử lý môi trường"};
   if (body.endUse&&useMap[body.endUse]) parts.push(useMap[body.endUse]);
-  if (body.origin) parts.push("xuat xu "+body.origin);
+  if (body.origin) parts.push("xuất xứ "+body.origin);
   return parts.join(", ");
 }
 
@@ -891,28 +891,49 @@ function renderResult(text, body) {
   var ov=extSec(text,"OVERVIEW");
   var fn=extSec(text,"FULLNAME");
 
-  var modeMap={import:"Nhap khau",export:"Xuat khau",business:"Kinh doanh",storage:"Luu tru",quick:"Tra nhanh"};
-  document.getElementById("resTitle").textContent = "Ket qua: "+body.tradeName;
+  var modeMap={import:"Nhập khẩu",export:"Xuất khẩu",business:"Kinh doanh",storage:"Luu tru",quick:"Tra nhanh"};
+  document.getElementById("resTitle").textContent = "Kết quả: "+body.tradeName;
   document.getElementById("resTags").innerHTML =
     '<span style="background:#0A2342;color:#fff;font-size:10px;font-weight:700;padding:3px 11px;border-radius:20px">'+(modeMap[body.mode]||body.mode)+'</span> '+
     '<span style="background:rgba(0,71,171,.1);color:#0047AB;border:1px solid rgba(0,71,171,.2);font-size:10px;font-weight:700;padding:3px 11px;border-radius:20px;font-family:monospace">'+body.hsCode+'</span> '+
     '<span style="background:rgba(0,184,148,.1);color:#00B894;border:1px solid rgba(0,184,148,.25);font-size:10px;font-weight:700;padding:3px 11px;border-radius:20px;font-family:monospace">CAS: '+body.casNumber+'</span>';
 
-  var hasLic=/can giay phep|phai xin giay|hoa chat han che/i.test(ov);
-  var noLic=/khong can giay phep|tu do thuong mai/i.test(ov);
-  var hasPre=/tien chat|nhom 4|kiem soat dac biet/i.test(ov);
-  var hasDec=/khai bao hoa chat|phai khai bao/i.test(ov);
+  // Smarter compliance detection - check explicit conclusions
+  var hasLicYes = /CẦN GIẤY PHÉP[:\s]*CÓ|phải xin giấy phép nhập khẩu|cần giấy phép đặc biệt/i.test(ov);
+  var hasLicNo  = /CẦN GIẤY PHÉP[:\s]*KHÔNG|không cần giấy phép|không phải xin giấy phép|tự do thương mại|không thuộc danh mục hạn chế/i.test(ov);
+  var hasPre    = /là tiền chất|thuộc tiền chất|nhóm IVB|KHÔNG - CAS.*không nằm/i.test(ov) && !/KHÔNG.*tiền chất|không phải tiền chất/i.test(ov);
+  var noPreExp  = /KHÔNG.*không nằm.*tiền chất|không thuộc.*tiền chất|CAS.*không nằm/i.test(ov);
+  var hasDec    = /phải khai báo|khai báo hóa chất nguy hiểm|bắt buộc khai báo/i.test(ov);
+  var noDec     = /không cần khai báo|không bắt buộc khai báo/i.test(ov);
 
   function setKF(id,val,cls){var el=document.getElementById(id);if(el){el.textContent=val;el.className="kfr-val "+cls;}}
-  setKF("kfLic", hasLic&&!noLic?"Can xin GP":noLic?"Khong can":"Can xac nhan", hasLic&&!noLic?"kfr-yes":noLic?"kfr-no":"kfr-warn");
-  setKF("kfPre", hasPre?"La tien chat":"Khong phai", hasPre?"kfr-yes":"kfr-no");
-  setKF("kfDec", hasDec?"Phai khai bao":"Khong bat buoc", hasDec?"kfr-yes":"kfr-no");
+  
+  if(hasLicNo||(!hasLicYes&&/không cần|không phải|tự do/i.test(ov)))
+    setKF("kfLic","❌ Không cần","kfr-no");
+  else if(hasLicYes)
+    setKF("kfLic","✅ Phải xin GP","kfr-yes");
+  else
+    setKF("kfLic","⚠️ Xem chi tiết","kfr-warn");
 
-  var score=(hasLic||hasPre)?72:hasDec?85:92;
+  if(noPreExp||/KHÔNG - CAS/i.test(ov))
+    setKF("kfPre","❌ Không phải","kfr-no");
+  else if(hasPre)
+    setKF("kfPre","✅ Là tiền chất","kfr-yes");
+  else
+    setKF("kfPre","❌ Không phải","kfr-no");
+
+  if(noDec)
+    setKF("kfDec","❌ Không bắt buộc","kfr-no");
+  else if(hasDec)
+    setKF("kfDec","✅ Phải khai báo","kfr-yes");
+  else
+    setKF("kfDec","⚠️ Xem chi tiết","kfr-warn");
+
+  var hasLicFinal=(hasLicYes&&!hasLicNo); var hasPreFinal=(hasPre&&!noPreExp); var score=hasLicFinal?70:hasPreFinal?75:hasDec?88:92;
   document.getElementById("scoreVal").textContent=score;
   document.getElementById("scoreArc").setAttribute("stroke-dashoffset",(213.6*(1-score/100)).toFixed(1));
-  document.getElementById("ccVerdict").textContent=score>=85?"Co the thuc hien":score>=70?"Can bo sung ho so":"Can xem xet ky";
-  document.getElementById("ccList").innerHTML=(hasDec?'<div class="cc-item"><span class="ci">✓</span>Khai bao hoa chat</div>':"")+'<div class="cc-item"><span class="ci">✓</span>SDS tieng Viet</div><div class="cc-item"><span class="ci">✓</span>Nhan GHS</div>'+(hasPre?'<div class="cc-item"><span style="color:#f87171">!</span>GP tien chat</div>':"");
+  document.getElementById("ccVerdict").textContent=score>=88?"✅ Có thể thực hiện":score>=75?"⚠️ Cần bổ sung hồ sơ":"🔴 Cần xem xét kỹ";
+  document.getElementById("ccList").innerHTML=(hasDec?'<div class="cc-item"><span class="ci">✓</span>Khai báo hóa chất</div>':"")+'<div class="cc-item"><span class="ci">✓</span>SDS tiếng Việt</div><div class="cc-item"><span class="ci">✓</span>Nhãn GHS</div>'+(hasPre?'<div class="cc-item"><span style="color:#f87171">!</span>GP tiền chất</div>':"");
 
   // Declaration name
   var declStr = "";
@@ -924,7 +945,7 @@ function renderResult(text, body) {
   if (!declStr) declStr = buildDecl(body);
   document.getElementById("declName").textContent = declStr;
   if (!document.getElementById("declNote").textContent)
-    document.getElementById("declNote").textContent = "Ten hang tham chieu theo quy dinh khai bao hai quan - can xac nhan voi co quan kiem tra chuyen nganh truoc khi khai chinh thuc.";
+    document.getElementById("declNote").textContent = "Tên hàng tham chiếu theo quy định khai báo hải quan – cần xác nhận với cơ quan kiểm tra chuyên ngành trước khi khai chính thức.";
 
   renderRich(document.getElementById("ovContent"),ov);
   renderSteps(document.getElementById("prContent"),extSec(text,"PROCEDURE"));
